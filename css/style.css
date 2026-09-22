@@ -1,0 +1,10 @@
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f4f7fb;line-height:1.5}
+*{box-sizing:border-box}body{margin:0;min-height:100vh}main{width:min(1000px,92%);margin:32px auto 60px}
+h1{margin-bottom:20px}h2{font-size:1.1rem;margin:0 0 16px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.summary div,.card{background:#fff;border:1px solid #e6eaf0;border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(20,30,50,.05)}
+.summary span{display:block;color:#667085;font-size:.9rem}.summary strong{display:block;font-size:1.5rem;margin-top:5px}
+form{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:10px}input,select,button{font:inherit;border:1px solid #d5dae2;border-radius:10px;padding:10px 12px;background:#fff}button{cursor:pointer;font-weight:600}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px}.toolbar h2{margin:0}.toolbar div{display:flex;gap:8px}
+#transactions{display:grid;gap:8px}.transaction{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf0f4;padding:13px 0}.transaction:first-child{border-top:0}.meta{color:#667085;font-size:.85rem}.income{color:#087443}.expense{color:#b42318}.delete{padding:6px 9px}
+.bar-row{margin:12px 0}.bar-label{display:flex;justify-content:space-between;font-size:.9rem}.bar-track{height:9px;background:#e9edf2;border-radius:99px;overflow:hidden}.bar{height:100%;background:#4f46e5;border-radius:99px}
+.empty{text-align:center;color:#667085;padding:20px}.dark{background:#10131a;color:#eef2f7}.dark .card,.dark .summary div{background:#171b24;border-color:#292f3b}.dark input,.dark select,.dark button{background:#171b24;color:#eef2f7;border-color:#343b48}.dark .meta,.dark .summary span,.dark .empty{color:#aab3c2}
+@media(max-width:760px){form{grid-template-columns:1fr 1fr}.summary{grid-template-columns:1fr}.toolbar{align-items:flex-start;flex-direction:column}.transaction{gap:10px}.toolbar div{flex-wrap:wrap}}
+@media(max-width:480px){form{grid-template-columns:1fr}main{width:94%;margin-top:18px}}
