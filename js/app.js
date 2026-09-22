@@ -52,3 +52,13 @@ filter.addEventListener("change",renderTransactions);
 document.querySelector("#clearAll").addEventListener("click",()=>{if(confirm("Delete all transactions?")){transactions=[];save();render();}});
 document.querySelector("#themeToggle").addEventListener("click",()=>{document.body.classList.toggle("dark");document.querySelector("#themeToggle").textContent=document.body.classList.contains("dark")?"☀️":"🌙";});
 render();
+
+/* Premium cursor interaction */
+const cursorGlow=document.querySelector(".cursor-glow");
+if(cursorGlow && window.matchMedia("(pointer:fine)").matches){
+  window.addEventListener("pointermove",e=>{cursorGlow.style.left=e.clientX+"px";cursorGlow.style.top=e.clientY+"px";});
+  document.querySelectorAll(".card,.summary div,button,input,select").forEach(el=>{
+    el.addEventListener("mouseenter",()=>cursorGlow.style.opacity=".9");
+    el.addEventListener("mouseleave",()=>cursorGlow.style.opacity=".45");
+  });
+}
